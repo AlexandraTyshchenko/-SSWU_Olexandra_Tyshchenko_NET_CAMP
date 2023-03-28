@@ -106,17 +106,7 @@ namespace homework_1._1
             }
             return sb.ToString();
         }
-        private int returnvaluebyindex(direction dir,int i,int j)//для скорочення коду приватний метод для перевірки 
-        {
-            if(dir== direction.left)//проти стрілкою
-            {
-                return _matrix[i,j];
-            }
-            else
-            {
-               return  _matrix[j,i];
-            }
-        }
+       
        
 }
 }
