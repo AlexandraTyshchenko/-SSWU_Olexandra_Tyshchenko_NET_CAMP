@@ -1,0 +1,15 @@
+C:\Users\oleks\Desktop\ConsoleApp2\bin\Debug\net6.0\TensorTask.exe
+C:\Users\oleks\Desktop\ConsoleApp2\bin\Debug\net6.0\TensorTask.deps.json
+C:\Users\oleks\Desktop\ConsoleApp2\bin\Debug\net6.0\TensorTask.runtimeconfig.json
+C:\Users\oleks\Desktop\ConsoleApp2\bin\Debug\net6.0\TensorTask.dll
+C:\Users\oleks\Desktop\ConsoleApp2\bin\Debug\net6.0\TensorTask.pdb
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.csproj.AssemblyReference.cache
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.AssemblyInfoInputs.cache
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.AssemblyInfo.cs
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.csproj.CoreCompileInputs.cache
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.dll
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\refint\TensorTask.dll
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.pdb
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\TensorTask.genruntimeconfig.cache
+C:\Users\oleks\Desktop\ConsoleApp2\obj\Debug\net6.0\ref\TensorTask.dll
