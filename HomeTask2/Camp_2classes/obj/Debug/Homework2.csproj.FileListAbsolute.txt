@@ -1,0 +1,8 @@
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\bin\Debug\Camp_2classes.exe.config
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\bin\Debug\Camp_2classes.exe
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\bin\Debug\Camp_2classes.pdb
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\obj\Debug\Homework2.csproj.AssemblyReference.cache
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\obj\Debug\Homework2.csproj.SuggestedBindingRedirects.cache
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\obj\Debug\Homework2.csproj.CoreCompileInputs.cache
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\obj\Debug\Camp_2classes.exe
+C:\Users\oleks\Desktop\Camp_2classes\Camp_2classes\obj\Debug\Camp_2classes.pdb
