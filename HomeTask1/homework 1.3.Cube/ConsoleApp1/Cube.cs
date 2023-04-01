@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,7 @@ namespace CubeTask
             int check_horizontal = 0;
             int check_diagonal2 = 0;
             int check_vertical = 0;
+            int check_vertical2 = 0;
             var holes = new List<Coordinates>();
             for (int k = 0; k < _size; k++)
             {
@@ -50,6 +52,7 @@ namespace CubeTask
                 {
                     check_horizontal = 0;
                     check_vertical = 0;
+                    check_vertical2 = 0;
                     for (int j = 0; j < _size; j++)
                     {
                         if (_arr[i, j, k] == 0)
@@ -60,6 +63,16 @@ namespace CubeTask
                             check_diagonal2++;
                         if (_arr[j, i, k] == 0)
                             check_horizontal++;
+                        
+                        if (_arr[i,k, j] == 0)
+                            check_vertical2++;
+
+                       
+                    }
+                    if (check_vertical2 == _size)
+                    {
+                        holes.Add(new Coordinates(i,k, 0, i,k, _size - 1));
+                        
                     }
                     if (check_vertical == _size)
                     {
