@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 namespace homework_1._1
-{
+{// Enum іменуйте з великої літери
     enum direction
     {
         left,
@@ -19,6 +19,7 @@ namespace homework_1._1
         public Matrix(int m=3,int n = 3)
         {
             _matrix = new int[_m=m,_n=n];
+            // Не обов'язковий варіант виклику з конструктора.
             GenerateСounterclockwise();//за замовчуванням буде проти годинникової стрілки
         }
         public void GenerateSpiral(direction dir = direction.left)
