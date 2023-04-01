@@ -64,6 +64,7 @@ namespace homework_1._2
             int buf;
             int[] bufstart = new int[2];
             int[] bufend = new int[2];
+           // Надмірна кількість циклів. Достатньо 2.
             for (int i = 0; i < _matrix.GetLength(0); i++)
             {
 
