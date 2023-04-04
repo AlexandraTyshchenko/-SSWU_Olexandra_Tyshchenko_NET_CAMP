@@ -29,14 +29,18 @@ namespace Homework2
         {
 
         }
+        public void UserConsume()
+        {
+            _waterTower.CurrentLevel -= _user.Consumption;
+        }
         public void Execute()
         {
             if (!Check())
             {
                 new Exception("temporary problems with pump");
             }
-            if(Validator.CheckUserConsumption(_waterTower, _user))
-                _waterTower.CurrentLevel -= _user.Consumption;
+            if (Validator.CheckUserConsumption(_waterTower, _user))
+                UserConsume();//added this function 4.04 update
             else
                 _waterTower.TurnOnPump();
         }
