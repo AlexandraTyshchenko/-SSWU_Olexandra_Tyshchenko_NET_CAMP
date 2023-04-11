@@ -11,6 +11,7 @@ namespace Homework2
         private double _consumption;
         public double Consumption
         { get { return _consumption; }}//тільки отримати можна
+        // користувач споживати воду не планує?
         public User(double consumption)
         {
             if (Validator.IsValidUserConsumption(_consumption))
