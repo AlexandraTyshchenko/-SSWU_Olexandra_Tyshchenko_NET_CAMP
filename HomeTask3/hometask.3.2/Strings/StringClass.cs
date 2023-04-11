@@ -34,6 +34,7 @@ namespace Strings
             }
             return count;
         }
+        //порушиться початкова структура.
         public void ReplaceWordsWithNewWord(string substring)
         {
 
