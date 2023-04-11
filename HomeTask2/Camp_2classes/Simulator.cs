@@ -13,7 +13,8 @@ namespace Homework2
         private WaterTower _waterTower;
         private Pump _pump;
         
-
+//Хто породжує насос, користувача, вежу і т.д.,
+        
         public Simulator(User user, WaterTower waterTower, Pump pump)
         {
             _user=user;
