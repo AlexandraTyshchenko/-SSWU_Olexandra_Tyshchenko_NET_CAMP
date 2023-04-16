@@ -1,0 +1,15 @@
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\bin\Debug\net6.0\task4.3.exe
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\bin\Debug\net6.0\task4.3.deps.json
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\bin\Debug\net6.0\task4.3.runtimeconfig.json
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\bin\Debug\net6.0\task4.3.dll
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\bin\Debug\net6.0\task4.3.pdb
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.csproj.AssemblyReference.cache
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.AssemblyInfoInputs.cache
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.AssemblyInfo.cs
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.csproj.CoreCompileInputs.cache
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.dll
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\refint\task4.3.dll
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.pdb
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\task4.3.genruntimeconfig.cache
+C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask4\task4.3\obj\Debug\net6.0\ref\task4.3.dll
