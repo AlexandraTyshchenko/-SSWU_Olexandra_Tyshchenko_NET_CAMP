@@ -10,6 +10,7 @@ namespace task4._3
     {
         private List<Subscriber> _subscribers;
         private StreamReader _sr;
+        
         public int Quarter { get; set; }
         public double Price{ get; set; }
         private Dictionary<int, double> _costs;
@@ -29,6 +30,7 @@ namespace task4._3
         }
         public void ReadFromFile()
         {
+            _subscribers.Clear();//якщо треба заново зчитати
             string line =  _sr.ReadLine();
             string[] arr = null;
             int[] maxLengths = null;
@@ -69,6 +71,30 @@ namespace task4._3
             }
             _sr.Close();
         }
+        private  int GetMonth(int monthInQuarter)
+        {
+            int month = 0;
+
+            switch (Quarter)
+            {
+                case 1:
+                    month = monthInQuarter;
+                    break;
+                case 2:
+                    month = 3 + monthInQuarter;
+                    break;
+                case 3:
+                    month = 6 + monthInQuarter;
+                    break;
+                case 4:
+                    month = 9 + monthInQuarter;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid quarter number.");
+            }
+
+            return month;
+        }
         public string GetInfoAboutFlatByNumber(int number)
         {
             string result = _subscribers.FirstOrDefault(s => s.Flat == number).ToString();
@@ -108,7 +134,7 @@ namespace task4._3
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("|{0,-2}|{1,-26}|{2,-10}|{5,-6}|{6,-6}|{3,-10}|{5,-6}|{6,-6}|{4,-10}|{5,-6}|{6,-6}|{7,-15}", "N", "pib",new DateTime(2022,Quarter,2).ToString("MMMM"), new DateTime(2022, Quarter+1, 2).ToString("MMMM"), new DateTime(2022, Quarter+2, 2).ToString("MMMM"), "input", "output","days after last meter");//new DateTime(2022,Quarter,2) - витягую назву місяця залежно від кварталу
+            sb.AppendFormat("|{0,-2}|{1,-26}|{2,-10}|{5,-6}|{6,-6}|{3,-10}|{5,-6}|{6,-6}|{4,-10}|{5,-6}|{6,-6}|{7,-15}", "N", "pib",new DateTime(2022, GetMonth(1), 2).ToString("MMMM"), new DateTime(2022, GetMonth(2), 2).ToString("MMMM"), new DateTime(2022, GetMonth(3), 2).ToString("MMMM"), "input", "output","days after last meter");//new DateTime(2022,Quarter,2) - витягую назву місяця залежно від кварталу
             sb.Append("\n-------------------------------------------------------------------------------------------------------------------\n");
             foreach (var sub in _subscribers)
             {

@@ -9,4 +9,5 @@ using System.Text;
 Reader textReader = new Reader("text.txt");
 textReader.Read();
 Console.WriteLine(textReader);
+Console.WriteLine("Sentences With Brackets");
 Console.WriteLine(textReader.SentencesWithBrackets());

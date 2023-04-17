@@ -1,3 +1,3 @@
 HELLO
-I am learning c#.
-hello (hello)
+I am learning english(my favourite language). still learning. я вивчаю англійську(мою улюблену мову).
+Проблема тільки з виводом в консоль. З самим записуванням тексту все добре
