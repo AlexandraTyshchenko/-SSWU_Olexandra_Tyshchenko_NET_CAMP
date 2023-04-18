@@ -45,6 +45,8 @@ namespace ConsoleApp1
                 _treeList.Add(tree);
                 GenerateMatrix();
             }
+            CalculateLength();
+
         }
         public override string ToString()
         {
@@ -108,6 +110,7 @@ namespace ConsoleApp1
                 min = null;
                 max = null;
             }
+         
             for (int i = 1; i < right.Count - 1; i++)
             {
                 if (right[i].X < right[i - 1].X && right[i].X < right[i + 1].X)
@@ -124,6 +127,12 @@ namespace ConsoleApp1
                     i--;
                 }
             }
+            // д1   
+            //     д2  видалить d2, тому що коротший шлях це д1 і д3
+            //           за властивістю сум двох сторін трикутника,
+            //           яка більша за третю. так само і за лівою стороною
+            //             буде порівнювати чи д2>д1 і д2>д3  по іксу
+            //д3
             for (int i = 1; i < right.Count; i++)//довжина огорожі справа
             {
                 double distance = Math.Sqrt(Math.Pow(right[i].X - right[i - 1].X, 2) + Math.Pow(right[i].Y - right[i - 1].Y, 2));
