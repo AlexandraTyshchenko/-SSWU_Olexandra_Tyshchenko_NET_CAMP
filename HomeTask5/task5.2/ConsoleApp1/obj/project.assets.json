@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask4\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask5\\task5.2\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask4\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask5\\task5.2\\ConsoleApp1\\ConsoleApp1.csproj",
       "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask4\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask5\\task5.2\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oleks\\AppData\\Roaming\\NuGet\\NuGet.Config",
