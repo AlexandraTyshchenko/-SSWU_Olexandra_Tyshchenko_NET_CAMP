@@ -19,10 +19,10 @@ namespace ConsoleApp1
             bool check = true;
             while (check)
             {
-                Console.WriteLine("1 - add department, 2 - add subdepartment to department");
+                Console.WriteLine("1 - add department, 2 - add subdepartment to department, 3 - Add Items To Department" +
+                    "4 - show shop" +
+                    "any key to save changes ");
                 var option = Console.ReadLine();
-                
-
                 switch (option)
                 {
                     case "1":
@@ -31,19 +31,26 @@ namespace ConsoleApp1
                     case "2":
                         AddSubDepartment();
                         break;
+                    case "3":
+                        AddItemsToDepartment();
+                        break;
+                    case "4":
+                        Console.WriteLine(_shop);
+                        break;
                     default: 
                         check= false;
                         break;
+
                 }
             }
-          
             return _shop;
         }
-        private void AddSubDepartment()
+        private void AddItemsToDepartment()
         {
-            Console.WriteLine(_shop);   
-            Department department=null;
-            while (true){
+            Department department = null;
+            Console.WriteLine(_shop);
+            while (true)
+            {
                 Console.WriteLine("choose department");
                 string name = Console.ReadLine();
                 try
@@ -54,6 +61,103 @@ namespace ConsoleApp1
                         try
                         {
                             department = department.GetSubepartment(name);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"{ex.Message}");
+                            continue;
+                        }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"{ex.Message}");
+                    return;
+                }
+               
+
+                Console.WriteLine($"if you want to move upper press 1\n" +
+                    $"if you want to move to {department.Level + 1} level, press 2\n" +
+                    "if you want to add department press any key"
+                    );
+                var option = Console.ReadKey();
+                if (option.KeyChar == '1')
+                {
+                    department = department.ParentDepartment;
+                }
+                if (option.KeyChar != '2' && option.KeyChar != '1')
+                {
+                    department.AddDepartmentBox(AddItemsToDepartmentBoxes());
+                    Console.WriteLine(_shop);
+                    return;
+                }
+
+            }
+
+        }
+        private DepartmentBox AddItemsToDepartmentBoxes()
+        {
+            List<ItemBox> ItemBoxes = new List<ItemBox>();
+            while (true)
+            {
+                ItemBoxes.Add(AddItemsToItemBox());
+                Console.WriteLine("Enter 1 to stop adding ItemBoxes, or any other key to continue:");
+                var keyPressed = Console.ReadKey();
+                if (keyPressed.KeyChar == '1')
+                {
+                    break;
+                }
+            }
+            return new DepartmentBox(ItemBoxes);
+        }
+        private ItemBox AddItemsToItemBox()
+        {
+            List<Item> items = new List<Item>();
+            string name;
+            int length;
+            int height;
+            int width;
+
+            while (true)
+            {
+                Console.WriteLine("Enter item name:");
+                name = Console.ReadLine();
+
+                Console.WriteLine("Enter item length:");
+                length = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter item height:");
+                height = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter item width:");
+                width = Convert.ToInt32(Console.ReadLine());
+
+                items.Add(new Item(name, height, length, width));
+                Console.WriteLine();
+
+                Console.WriteLine("Enter 1 to stop adding items, or any other key to continue:");
+                var keyPressed = Console.ReadKey();
+                if (keyPressed.KeyChar == '1')
+                {
+                    break;
+                }
+            }return new ItemBox(items);
+        }
+       
+        private void AddSubDepartment()
+        {
+            Console.WriteLine(_shop);   
+            Department department=null;
+            while (true){
+                Console.WriteLine("choose department");
+                string name = Console.ReadLine();
+                try
+                {
+                    if (department == null)//якщо це перший відділ то на рівні магазину до нього доступитись
+                        department = _shop.GetDepartment(name);
+                    else
+                        try
+                        {
+                            department = department.GetSubepartment(name);//перейде до наступного відділу
                         }
                         catch (Exception ex)
                         {

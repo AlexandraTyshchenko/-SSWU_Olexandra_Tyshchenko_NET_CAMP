@@ -6,31 +6,36 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    
+
     internal class Item
     {
         public int Id { get; set; }
         private string _name;
-        private int _hight;
-        private int _length;
-        private int _width;
+        public int Height { get; }
+        public int Width { get; }
+        public int Length { get; }
         public Item()
         {
             GenerateID();
         }
-        public Item(string name, int hight, int length, int width)
+        public Item(string name, int height, int length, int width)
         {
             GenerateID();
             _name = name;
-            _hight = hight;
-            _length = length;
-            _width = width;
+            Height = height;
+            Width = length;
+            Length = width;
         }
 
-        private  void GenerateID()
+        private void GenerateID()
         {
             var random = new Random();
-            Id =  random.Next(1, 1000);
+            Id = random.Next(1, 1000);
+        }
+
+        public override string ToString()
+        {
+            return $"Item ID: {Id}, Name: {_name}, Height: {Height}, Length: {Length}, Width: {Width}\n";
         }
     }
 }

@@ -62,6 +62,11 @@ namespace ConsoleApp1
                 throw new Exception("name not found");
             return Subdepartments.FirstOrDefault(d => d.Name == name);
         }
+        public void AddDepartmentBox(DepartmentBox departmentBox)
+        {
+           
+                  DepartmentBoxes.Add(departmentBox);
+        }
         public override string ToString()
         {
             StringBuilder stringBuilder= new StringBuilder();
@@ -70,6 +75,10 @@ namespace ConsoleApp1
             foreach(var sub in Subdepartments)
             {
                 stringBuilder.Append(sub.ToString());
+            }
+            foreach (var Box in DepartmentBoxes)
+            {
+                stringBuilder.Append(Box.ToString());
             }
             return stringBuilder.ToString();
         }
