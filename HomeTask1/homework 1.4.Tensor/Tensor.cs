@@ -1,5 +1,5 @@
 ﻿namespace TensorTask
-{
+{// Щоб було ще краще, треба зробити клас-узагальнення та здійснити неявне приведення до типу Tensor масивів. 
     internal class Tensor
     {
         private readonly int[] _dimensionSizes;
