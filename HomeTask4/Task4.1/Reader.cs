@@ -67,6 +67,7 @@ namespace HomeTask4
         public override string ToString()
         {
             StringBuilder stringBuilder= new StringBuilder();
+            //Ви не використовуєте наступні 2 стрічки.
             char first = '(';
             char last = ')';
             foreach (var s in _sentences)
