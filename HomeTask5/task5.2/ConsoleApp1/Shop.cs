@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
-{
+{// надлишково. Магазин є теж Departmen.
     internal class Shop
     {
         private List<Department> _departments;
