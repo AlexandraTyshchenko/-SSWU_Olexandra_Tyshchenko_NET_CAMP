@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace task4._2
-{
+{// не всі умови враховано...
     internal class EmailValidator
     {
         private StreamReader _sr;
@@ -53,7 +53,7 @@ namespace task4._2
             _sr.Close();
         }
         private bool IsAllLatinOrDigitLocal(string str)
-        {
+        {// можна користуватись готовими функціями
             if (ifHasQuotes(str))
                 return str.All(c => char.IsDigit(c) || (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') || delimiters.Contains(c) || c == '"' || c == ' ');
             return str.All(c => char.IsDigit(c) || (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') || delimiters.Contains(c)) && CheckDot(str);
