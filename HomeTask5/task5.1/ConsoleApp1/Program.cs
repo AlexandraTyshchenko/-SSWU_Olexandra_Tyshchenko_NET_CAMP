@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+//Розв'язано тільки дискретний випадок. Координати дерев можуть бути дійсними...
+// See https://aka.ms/new-console-template for more information
 using ConsoleApp1;
 List<Tree> c= new List<Tree>();
 c.Add(new Tree(3, 5));
