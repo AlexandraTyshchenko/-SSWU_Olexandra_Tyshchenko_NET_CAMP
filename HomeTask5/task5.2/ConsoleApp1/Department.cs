@@ -12,6 +12,7 @@ namespace ConsoleApp1
         public int Level { get; set; }
         public  List<DepartmentBox> DepartmentBoxes { get; set; }
         public List<Department> Subdepartments { get; set; }
+        // Надлишково.
         public Department ParentDepartment { get; set; }
 
         public Department(string name, List<DepartmentBox> departmentBoxes, List<Department> subdepartments)
