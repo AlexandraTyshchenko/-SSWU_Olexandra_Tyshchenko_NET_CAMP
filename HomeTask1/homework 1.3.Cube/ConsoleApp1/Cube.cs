@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CubeTask
-{
+{// Дуже добре.
     internal class Cube
     {
         private int _size;
+        // int надлишковий тип для цієї задачі.
         private int[,,] _arr;
         private readonly Random random;
         public int Size
