@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 using task4._3;
-
+// Форматування добре. Але числа після таблиці не прокоментовані для користувача.
 Accounting accounting = new Accounting(1);
 accounting.ReadFromFile();
 Console.WriteLine(accounting);
