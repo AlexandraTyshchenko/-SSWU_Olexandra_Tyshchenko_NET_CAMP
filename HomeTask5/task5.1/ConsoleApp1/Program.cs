@@ -1,4 +1,4 @@
-﻿
+﻿//Oleksandra	Tyshchenko 92	20	19	85	85	90	75	104,9 Вітаю вас в 2 турі.
 //Розв'язано тільки дискретний випадок. Координати дерев можуть бути дійсними...
 // See https://aka.ms/new-console-template for more information
 using ConsoleApp1;
