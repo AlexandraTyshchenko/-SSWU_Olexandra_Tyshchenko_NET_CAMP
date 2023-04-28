@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.PortableExecutable;
 using System.Text;
-
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 Reader textReader = new Reader("text.txt");
 textReader.Read();
 Console.WriteLine(textReader);
