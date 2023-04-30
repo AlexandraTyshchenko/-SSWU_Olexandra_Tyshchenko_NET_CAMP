@@ -24,7 +24,7 @@ namespace ConsoleApp1
         }
         public bool MoveNext()
         {
-            if (down == false && right == false && upDiagonal == false && downDiagonal == false)
+            if (down == false && right == false && upDiagonal == false && downDiagonal == false)//якщо ще не було напрямку руху
             {
                 down = true;
                 return true&&  i< _matrix.GetLength(0) && j< _matrix.GetLength(0);
@@ -32,28 +32,28 @@ namespace ConsoleApp1
             if (down == true)
             {
                 
-                i++;
+                i++;//напрямок вниз
                 if (changedirection)
-                    downDiagonal = true;
+                    downDiagonal = true;//після руху вниз до досягнення першої діагоналі - напрямок вверх по діагоналі, після нього перевірка на зміну напрямку, тоді вниз по діагоналі
                 else
                     upDiagonal = true;
                 down = false;
 
 
-                return true && i < _matrix.GetLength(0) && j < _matrix.GetLength(0);
+                return true && i < _matrix.GetLength(0) && j < _matrix.GetLength(0);//повернути тру з перевіркою чи i i j за межами матриці, якщо так повернути фолс
             }
             if (upDiagonal == true)
             {
-                if (i == 1 || j==_matrix.GetLength(0)-2)
+                if (i == 1 || j==_matrix.GetLength(0)-2)//якщо досягнули країв матриці
                 {
                    if(i==1 && j== _matrix.GetLength(0) - 2)
                     {
                         down = true;
-                        changedirection= true;
+                        changedirection= true;//якщо це побічна діагональ - змінити напрямок
                     }
                     else
                     {
-                        if(changedirection)
+                        if(changedirection)//якщо напрямок змінений(може відбутися у функції downdiagonal), nj то змінити напрямок 
                             down= true;
                         else
                             right = true;

@@ -32,7 +32,7 @@ namespace ConsoleApp1
             foreach (int[] array in arrays)
             {
 
-                list = list.Union(array).ToList();
+                list = list.Concat(array).ToList();
             }
             list.Sort();
             foreach (var l in list)
