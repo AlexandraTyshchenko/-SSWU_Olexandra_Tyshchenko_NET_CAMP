@@ -18,7 +18,7 @@ namespace ConsoleApp1
             List<string> words = new List<string>(text.Split(' ', '.', ',', ';', ':', '!', '?', '\n', '\r', '\t'));
             foreach (var word in words)
             {
-                if (words.Count(w => w.ToLower() == word.ToLower()) == 1)
+                if (words.Count(w => w.ToLower() == word.ToLower()) == 1)//якщо слово зустрічається раз в тексті
                 {
                     yield return word;
                 }
