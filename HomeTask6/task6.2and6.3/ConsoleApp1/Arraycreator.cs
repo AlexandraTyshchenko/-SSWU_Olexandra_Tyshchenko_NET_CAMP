@@ -26,7 +26,8 @@ namespace ConsoleApp1
 
         }
         private static IEnumerable<int> SortArrays(params int[][] arrays)
-        {
+        {// треба було IEnumerable<int> list = new List<int>();Тоді відпала б необхідність на кожному кроці перетворювати в список.
+
             List<int> list = new List<int>();
 
             foreach (int[] array in arrays)
