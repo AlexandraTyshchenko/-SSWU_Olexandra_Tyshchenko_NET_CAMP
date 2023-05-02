@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
-{
+{// Ви не використовуєте yield. Обгрунтуйте це на занятті.
     internal class MatrixGenerator<T> : IEnumerable
     {
         private T[,] _matrix;
