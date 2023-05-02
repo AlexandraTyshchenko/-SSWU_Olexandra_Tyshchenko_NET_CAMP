@@ -21,6 +21,7 @@ namespace ConsoleApp1
                     _matrix[i, j] = matrix[i, j];
                 }
             }
+            // Не бачу потребу у створенні окремого класу.
             _enumerator = new MatrixEnumerator<T>(_matrix);//передаю посилання на масив щоб його не створювати і не переписувати
         }     
         public IEnumerator GetEnumerator()
