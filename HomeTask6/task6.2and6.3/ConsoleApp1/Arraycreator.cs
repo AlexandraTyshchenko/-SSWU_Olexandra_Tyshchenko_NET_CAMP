@@ -16,6 +16,7 @@ namespace ConsoleApp1
         {
 
             List<string> words = new List<string>(text.Split(' ', '.', ',', ';', ':', '!', '?', '\n', '\r', '\t'));
+            // Не враховано, що пробільних символів може бути кілька підряд.
             foreach (var word in words)
             {
                 if (words.Count(w => w.ToLower() == word.ToLower()) == 1)//якщо слово зустрічається раз в тексті
@@ -26,7 +27,8 @@ namespace ConsoleApp1
 
         }
         private static IEnumerable<int> SortArrays(params int[][] arrays)
-        {
+        {// треба було IEnumerable<int> list = new List<int>();Тоді відпала б необхідність на кожному кроці перетворювати в список.
+
             List<int> list = new List<int>();
 
             foreach (int[] array in arrays)

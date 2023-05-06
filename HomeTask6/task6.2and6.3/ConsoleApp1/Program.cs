@@ -1,4 +1,4 @@
-﻿
+﻿// Сумарний бал - 95
 using ConsoleApp1;
 using System.Collections;
 using System.Collections.Generic;

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     class MatrixEnumerator<T> : IEnumerator
-    {
+    {// Вдячна за коментарі.
         private readonly T[,] _matrix;
         private int i, j;
         bool down = false;
