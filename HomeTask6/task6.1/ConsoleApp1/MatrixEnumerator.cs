@@ -14,7 +14,7 @@ namespace ConsoleApp1
         private int i, j;
         bool down = false;
         bool right = false;
-        bool upDiagonal;
+        bool upDiagonal=false;
         bool downDiagonal = false;
         bool changedirection= false;
         public object Current => _matrix[i, j];
@@ -102,6 +102,11 @@ namespace ConsoleApp1
         {
             i = 0;
             j = 0;
+            down = false;
+            right = false;
+            upDiagonal = false;
+            downDiagonal = false;
+            changedirection = false;
         }
     }
 

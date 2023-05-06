@@ -1,6 +1,6 @@
 ﻿using ConsoleApp1;
 Random random = new Random();
-int[,] matrix = new int[6,6];
+double[,] matrix = new double[6,6];
 for (int i = 0;i <matrix.GetLength(0) ; i++)
 {
     for(int j = 0; j < matrix.GetLength(0); j++)
@@ -16,7 +16,7 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     }
     Console.WriteLine();
 }
-MatrixGenerator<int> matrixGenerator = new MatrixGenerator<int>(matrix);
+MatrixGenerator<double> matrixGenerator = new MatrixGenerator<double>(matrix);
 foreach(int i in matrixGenerator)
 {
     Console.WriteLine(i);
