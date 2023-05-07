@@ -16,8 +16,8 @@ namespace ConsoleApp1
 
     {
  
-        public event Rule? SetRule;
-        public event State? StateOutput;
+        public event Rule? SetRule;//івент для задання першого включення
+        public event State? StateOutput;//для того щоб будь який формат виводу міг підписатсь на цей івент
         public bool IsRed { get; set; } = false;
         public bool IsYellow { get; set; } = false;
         public bool IsGreen { get; set; } = false;
@@ -41,7 +41,7 @@ namespace ConsoleApp1
             get { return _to; }
             set
             {
-                CheckDirection(value);
+                CheckDirection(value); 
                 _to = value;
             }
         }
@@ -56,8 +56,8 @@ namespace ConsoleApp1
         {
             if (IsRed && !IsYellow)
             {
-                StateOutput.Invoke(this);
-                IsYellow = true;
+                StateOutput.Invoke(this);//вивести стан світлофорів
+                IsYellow = true;//спочатку включається червоне і жовте разом одночасно
                 return;
             }
             if (IsRed && IsYellow)
@@ -85,7 +85,7 @@ namespace ConsoleApp1
         }
         public void FirstRun()
         {
-            SetRule(this);
+            SetRule(this);//перше включення, на цей івент підписаний метод з класу перехрестя
         }
         public override string ToString()
         {

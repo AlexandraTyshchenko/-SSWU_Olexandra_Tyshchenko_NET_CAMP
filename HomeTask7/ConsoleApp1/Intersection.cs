@@ -20,21 +20,22 @@ namespace ConsoleApp1
         }
         public Intersection(List<TrafficLight> trafficlights)
         {
-            _trafficlights = trafficlights;
+            _trafficlights = trafficlights;//світлофори можуть бути окремо від перехрестя, тому агрегація
+            
         }
-        public void SetRules(TrafficLight trafficLight)
+        public void SetRules(TrafficLight trafficLight)//реалізовую метод для першого включення світлофорів
         {
-            if (trafficLight.From == Direction.South && trafficLight.To == Direction.North ||
+            if ((trafficLight.From == Direction.South && trafficLight.To == Direction.North) ||
 
-                trafficLight.To == Direction.South && trafficLight.From == Direction.North)
+               ( trafficLight.To == Direction.South && trafficLight.From == Direction.North))
             {
                 trafficLight.IsRed = true;
-                trafficLight.IsGreen = false;
+                trafficLight.IsGreen = false;//якщо напрямки північ південь чи південь північ перше включення червоне
                 trafficLight.IsYellow = false;
             }
-            if (trafficLight.From == Direction.East && trafficLight.To == Direction.West ||
+            if ((trafficLight.From == Direction.East && trafficLight.To == Direction.West )||
 
-                trafficLight.To == Direction.West && trafficLight.From == Direction.East)
+               ( trafficLight.To == Direction.East  && trafficLight.From == Direction.West))
             {
                 trafficLight.IsRed = false;
                 trafficLight.IsGreen = true;

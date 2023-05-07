@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal interface ITrafficRules
+    internal interface ITrafficRules//інтерфейс для реалізацій правил на перехресті
     {
         public void SetRules(TrafficLight trafficLight);
         public List<TrafficLight> TrafficLights{ get; set; }

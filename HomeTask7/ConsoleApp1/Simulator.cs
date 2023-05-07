@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
     internal class Simulator
     {
         private ITrafficRules _Intersection;
         public int Time { get; set; }
-        public Simulator(Intersection intersection,int time = 20)
+        public Simulator(Intersection intersection, int time = 20)
         {
-            _Intersection = (Intersection)intersection.Clone();
+            _Intersection = (Intersection)intersection.Clone();//в майбутньому можна створити об'єкти з іншою реалізацією інтерфейсу
             Time = time;
             SubscribeEvents();
         }
         private void Output(TrafficLight trafficLight)
         {
 
-            Console.WriteLine(DateTime.Now.ToString("hh:mm:ss")+"\n"+trafficLight.ToString());
+            Console.WriteLine(Time + " c\n" + trafficLight.ToString());
         }
 
         private void SubscribeEvents()
@@ -36,19 +30,20 @@ namespace ConsoleApp1
             {
                 trafficlight.FirstRun();
             }
-            TimeSpan totalTime = TimeSpan.FromSeconds(Time);
 
-            DateTime startTime = DateTime.Now;
-
-            while (DateTime.Now - startTime < totalTime)
+            while (true)
             {
+                if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
                 foreach (var trafficLight in _Intersection.TrafficLights)
                 {
                     trafficLight.ChangeState();
                 }
                 Thread.Sleep(Time * 100);
-
             }
+
 
         }
     }
