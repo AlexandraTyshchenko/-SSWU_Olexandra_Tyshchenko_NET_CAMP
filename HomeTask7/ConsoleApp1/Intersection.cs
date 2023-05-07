@@ -42,7 +42,7 @@ namespace ConsoleApp1
                 trafficLight.IsYellow = false;
             }
         }
-
+  
         public object Clone()
         {
             Intersection clone = new Intersection();

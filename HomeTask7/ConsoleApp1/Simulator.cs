@@ -4,7 +4,7 @@
     {
         private ITrafficRules _Intersection;
         public int Time { get; set; }
-        public Simulator(Intersection intersection, int time = 20)
+        public Simulator(Intersection intersection, int time = 2)
         {
             _Intersection = (Intersection)intersection.Clone();//в майбутньому можна створити об'єкти з іншою реалізацією інтерфейсу
             Time = time;
@@ -18,6 +18,7 @@
 
         private void SubscribeEvents()
         {
+            
             foreach (var trafficLight in _Intersection.TrafficLights)
             {
                 trafficLight.SetRule += _Intersection.SetRules;
@@ -41,7 +42,7 @@
                 {
                     trafficLight.ChangeState();
                 }
-                Thread.Sleep(Time * 100);
+                Thread.Sleep(Time * 1000);
             }
 
 

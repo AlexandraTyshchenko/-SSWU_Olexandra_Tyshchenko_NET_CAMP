@@ -13,5 +13,5 @@ List<TrafficLight> list = new List<TrafficLight>()
 };
 Intersection Intersection = new Intersection(list);
 
-Simulator simulator = new Simulator(Intersection,20);
+Simulator simulator = new Simulator(Intersection,2);
 simulator.Run();
