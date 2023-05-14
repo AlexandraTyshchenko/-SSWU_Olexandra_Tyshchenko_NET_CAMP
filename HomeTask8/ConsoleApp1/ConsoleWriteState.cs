@@ -8,9 +8,11 @@ namespace ConsoleApp1
 {
     internal class ConsoleWriteState : IOutput
     {
-        public void StateTrafficLightOutput(IIntersection intersection)
+        public void StateTrafficLightOutput(IIntersection intersection,int time)
         {
-            //simulator.StateOutput += (simulator) => Console.WriteLine(simulator);
+            if(intersection is Intersection thisintersection){
+                Console.WriteLine(thisintersection+"\n"+time+"c\n");
+            }
         }
        
     }

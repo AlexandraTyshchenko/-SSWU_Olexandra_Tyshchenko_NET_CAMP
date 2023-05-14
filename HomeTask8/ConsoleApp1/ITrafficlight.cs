@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal interface ITrafficlight { 
-
+    internal interface ITrafficlight {
+        public bool IsRed { get; set; }
+        public bool IsYellow { get; set; }
+        public bool IsGreen { get; set; }
     }
 }

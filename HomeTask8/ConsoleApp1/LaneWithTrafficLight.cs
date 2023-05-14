@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Lane:ILane//можна реалізувати інтерфейс без trafficlight
+    internal class LaneWithTrafficLight:LaneDecorator
     {
         public ITrafficlight Trafficlight { get; set; }//напевно зробити валідацію певного типу, може добавити тип direction
         public Direction LaneDirection { get; set; }
-        public Lane(ITrafficlight trafficLight,Direction direction)
+        public LaneWithTrafficLight(ITrafficlight trafficLight,Direction direction):base(direction)
         {
             Trafficlight= trafficLight;
-            LaneDirection= direction;
         }
-        public Lane()
+        public LaneWithTrafficLight() : base() 
         {
 
         }
-      
+        public override string ToString()
+        {
+            return Trafficlight.ToString();
+        }
     }
 }

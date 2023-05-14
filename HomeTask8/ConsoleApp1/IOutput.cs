@@ -8,6 +8,6 @@ namespace ConsoleApp1
 {
     internal interface IOutput
     {
-        public void StateTrafficLightOutput(IIntersection intersection);
+        public void StateTrafficLightOutput(IIntersection intersection,int time);
     }
 }

@@ -3,17 +3,17 @@
 using ConsoleApp1;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
-ILane Lane = new Lane(new TrafficLightDecorator(), new Direction(DirectionType.South,DirectionType.North));
-ILane Lane1 = new Lane(new TrafficLightWithTurnLamp(), new Direction(DirectionType.South, DirectionType.North));
+ILane Lane = new LaneWithTrafficLight(new TrafficLightDecorator(), new Direction(DirectionType.South,DirectionType.North));
+ILane Lane1 = new LaneWithTrafficLight(new TrafficLightWithTurnLamp(), new Direction(DirectionType.South, DirectionType.North));
 List<ILane> lanesSouthNorth = new List<ILane>() { Lane,Lane1};
-ILane Lane2 = new Lane(new TrafficLightDecorator(), new Direction(DirectionType.North, DirectionType.South));
-ILane Lane3 = new Lane(new TrafficLightWithTurnLamp(), new Direction(DirectionType.North, DirectionType.South));
+ILane Lane2 = new LaneWithTrafficLight(new TrafficLightDecorator(), new Direction(DirectionType.North, DirectionType.South));
+ILane Lane3 = new LaneWithTrafficLight(new TrafficLightWithTurnLamp(), new Direction(DirectionType.North, DirectionType.South));
 List<ILane> lanesNorthSouth = new List<ILane>() { Lane2, Lane3 };
-ILane Lane4 = new Lane(new TrafficLightDecorator(), new Direction(DirectionType.East, DirectionType.West));
-ILane Lane5 = new Lane(new TrafficLightWithTurnLamp(), new Direction(DirectionType.East, DirectionType.West));
+ILane Lane4 = new LaneWithTrafficLight(new TrafficLightDecorator(), new Direction(DirectionType.East, DirectionType.West));
+ILane Lane5 = new LaneWithTrafficLight(new TrafficLightWithTurnLamp(), new Direction(DirectionType.East, DirectionType.West));
 List<ILane> lanesEastWest = new List<ILane>() { Lane4, Lane5 };
-ILane Lane6 = new Lane(new TrafficLightDecorator(), new Direction(DirectionType.West, DirectionType.East));
-ILane Lane7 = new Lane(new TrafficLightWithTurnLamp(), new Direction(DirectionType.West, DirectionType.East));
+ILane Lane6 = new LaneWithTrafficLight(new TrafficLightDecorator(), new Direction(DirectionType.West, DirectionType.East));
+ILane Lane7 = new LaneWithTrafficLight(new TrafficLightWithTurnLamp(), new Direction(DirectionType.West, DirectionType.East));
 List<ILane> lanesWestEast = new List<ILane>() { Lane6, Lane7 };
 IIntersection Intersection = new Intersection(lanesEastWest,lanesWestEast,lanesSouthNorth,lanesNorthSouth);
 IIntersection Intersection2 = new Intersection(lanesEastWest, lanesWestEast, lanesSouthNorth, lanesNorthSouth);

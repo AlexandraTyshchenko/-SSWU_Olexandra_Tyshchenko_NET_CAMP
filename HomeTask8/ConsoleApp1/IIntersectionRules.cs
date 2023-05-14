@@ -9,5 +9,6 @@ namespace ConsoleApp1
     internal interface IIntersectionRules
     {
         public void ChangeState(IIntersection intersection);
-    }
+        public void Reload(IIntersection intersection);
+    };
 }

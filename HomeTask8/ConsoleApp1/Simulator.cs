@@ -15,6 +15,11 @@
         }  
         public void Run()
         {
+            foreach (var (intersection, strategy) in _intersections)
+            {
+                strategy.Reload(intersection);
+            }
+
             while (true)
             {
                 if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Enter)
@@ -22,8 +27,9 @@
                     break;
                 }
                 foreach(var (intersection, strategy) in _intersections) {
-                        strategy.ChangeState(intersection);
-                        _output.StateTrafficLightOutput(intersection);
+                    _output.StateTrafficLightOutput(intersection, Time);
+                    strategy.ChangeState(intersection);
+                    
                 }
                 Thread.Sleep(Time * 1000);
             }

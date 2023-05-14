@@ -5,16 +5,17 @@ namespace ConsoleApp1
 {
     internal class TrafficLightWithTurnLamp : TrafficLightDecorator
     {
-        public TrafficLightDecorator TurnLamp { get; set; }//оскыльки світлофор має властивості isgreen
+        public bool TurnGreenLamp { get; set; } = false;//оскыльки світлофор має властивості isgreen
                                                            //isyellow isred то лампочка на повороті теж може бути об'єктом цього типу
-        public TrafficLightWithTurnLamp(bool isRed, bool isYellow, bool isGreen, TrafficLightDecorator TurnLamp):
-            base(isRed, isYellow, isGreen)
-        {
-            this.TurnLamp = TurnLamp;
-        }
+      
         public TrafficLightWithTurnLamp()
         {
 
+        }
+        public override string ToString()
+        {
+            string lamp = TurnGreenLamp == true ? "Поворот включений " : "Поворот виключений ";
+            return base.ToString()+lamp;
         }
     }
 }
