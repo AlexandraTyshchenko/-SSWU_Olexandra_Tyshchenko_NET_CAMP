@@ -1,6 +1,5 @@
 ﻿namespace ConsoleApp1
 {
-    internal delegate void State(Simulator simulator);
 
     internal class Simulator
     {
@@ -26,11 +25,17 @@
                 {
                     break;
                 }
-                foreach(var (intersection, strategy) in _intersections) {
+                int id = 1;
+          
+
+                foreach (var (intersection, strategy) in _intersections)
+                {
+                    Console.WriteLine(id++);
                     _output.StateTrafficLightOutput(intersection, Time);
                     strategy.ChangeState(intersection);
-                    
+
                 }
+                
                 Thread.Sleep(Time * 1000);
             }
         }

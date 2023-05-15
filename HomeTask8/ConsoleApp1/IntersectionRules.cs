@@ -78,13 +78,16 @@ namespace ConsoleApp1
             ReloadOnLane(thisintersection.LaneNorthSouth);
 
             ReloadOnLane(thisintersection.LaneSouthNorth);
-            FirstRun(thisintersection);
+            FirstRun(thisintersection.LaneWestEast);
+            FirstRun(thisintersection.LaneEastWest);
+            FirstRun(thisintersection.LaneNorthSouth);
+            FirstRun(thisintersection.LaneSouthNorth);
         }
         private void ReloadOnLane(List<ILane> lanes)
         {
-            foreach (var l in lanes)//якщо змінено стан світлофорів то їх спершу виключити повністю
+            for(int i = 0; i<lanes.Count; i++)
             {
-                if (l is LaneWithTrafficLight laneWithTrafficLight)
+                if (lanes[i] is LaneWithTrafficLight laneWithTrafficLight)
                 {
                     laneWithTrafficLight.Trafficlight.IsGreen = false;
                     laneWithTrafficLight.Trafficlight.IsRed = false;
@@ -92,19 +95,20 @@ namespace ConsoleApp1
                     if (laneWithTrafficLight.Trafficlight is TrafficLightWithTurnLamp trafficLightWithTurn)
                     {
                         trafficLightWithTurn.TurnGreenLamp = false;
-                        
+
                     }
                 }
             }
+           
         }
-        private void FirstRun(Intersection intersection)
+        private void FirstRun(List<ILane> lanes)
         {
-            foreach (var l in intersection.LaneWestEast)
+            for (int i = 0; i < lanes.Count; i++)
             {
-                if (l is LaneWithTrafficLight laneWithTrafficLight)
+                if (lanes[i] is LaneWithTrafficLight laneWithTrafficLight)
                 {
-                    if ((l.LaneDirection.From == DirectionType.South && l.LaneDirection.To == DirectionType.North)
-                   || (l.LaneDirection.To == DirectionType.South && l.LaneDirection.To == DirectionType.North)
+                    if ((lanes[i].LaneDirection.From == DirectionType.South && lanes[i].LaneDirection.To == DirectionType.North)
+                   || (lanes[i].LaneDirection.To == DirectionType.South && lanes[i].LaneDirection.From == DirectionType.North)
                    )
 
                     {
@@ -116,9 +120,9 @@ namespace ConsoleApp1
                             trafficLightWithLamp.TurnGreenLamp = false;
                         }
                     }
-                    if ((l.LaneDirection.From == DirectionType.East && l.LaneDirection.To == DirectionType.West) ||
+                    if ((lanes[i].LaneDirection.From == DirectionType.East && lanes[i].LaneDirection.To == DirectionType.West) ||
 
-              (l.LaneDirection.To == DirectionType.East && l.LaneDirection.From == DirectionType.West))
+              (lanes[i].LaneDirection.To == DirectionType.East && lanes[i].LaneDirection.From == DirectionType.West))
                     {
                         laneWithTrafficLight.Trafficlight.IsRed = false;
                         laneWithTrafficLight.Trafficlight.IsGreen = true;

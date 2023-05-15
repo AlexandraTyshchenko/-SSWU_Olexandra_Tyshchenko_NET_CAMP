@@ -11,7 +11,7 @@ namespace ConsoleApp1
         public void StateTrafficLightOutput(IIntersection intersection,int time)
         {
             if(intersection is Intersection thisintersection){
-                Console.WriteLine(thisintersection+"\n"+time+"c\n");
+                Console.WriteLine(thisintersection+Convert.ToString(time)+"c\n");
             }
         }
        

@@ -11,9 +11,9 @@ namespace ConsoleApp1
      //оскільки це також може бути вже готовим об'єктом класу, а якщо потрібно додати нове поле чи функціонал
      //то можна наслідуватись від цього класу
 
-        public bool IsRed { get ; set; }
-        public bool IsYellow { get; set ; }
-        public bool IsGreen { get ; set; }
+        public bool IsRed { get ; set; }=true;
+        public bool IsYellow { get; set ; } = true;
+        public bool IsGreen { get ; set; } = true;
         public TrafficLightDecorator()
         {
 
@@ -38,5 +38,14 @@ namespace ConsoleApp1
             return stringBuilder.ToString();
         }
 
+        public virtual object Clone()
+        {
+            TrafficLightDecorator trafficLightDecorator  = new TrafficLightDecorator();
+            trafficLightDecorator.IsRed = IsRed;
+            trafficLightDecorator.IsYellow = IsYellow;
+            trafficLightDecorator.IsGreen = IsGreen;
+            return trafficLightDecorator;
+
+        }
     }
 }

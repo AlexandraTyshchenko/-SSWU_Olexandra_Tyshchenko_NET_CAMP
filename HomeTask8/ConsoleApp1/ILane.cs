@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
   
-    internal interface ILane
+    internal interface ILane:ICloneable
     {
         public Direction LaneDirection { get; set; }
     }

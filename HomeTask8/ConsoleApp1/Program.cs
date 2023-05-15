@@ -18,9 +18,7 @@ List<ILane> lanesWestEast = new List<ILane>() { Lane6, Lane7 };
 IIntersection Intersection = new Intersection(lanesEastWest,lanesWestEast,lanesSouthNorth,lanesNorthSouth);
 IIntersection Intersection2 = new Intersection(lanesEastWest, lanesWestEast, lanesSouthNorth, lanesNorthSouth);
 List<(IIntersection, IIntersectionRules)> intersections = new List<(IIntersection, IIntersectionRules)>
-{(Intersection,new IntersectionRules()),
-(Intersection2,new IntersectionRules()),
-};
+{(Intersection,new IntersectionRules()),(Intersection2,new IntersectionRules())};
 IOutput output = new ConsoleWriteState();
 Simulator simulator = new Simulator(intersections,output,2);
 simulator.Run();

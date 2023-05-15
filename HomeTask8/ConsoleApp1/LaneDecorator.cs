@@ -13,6 +13,7 @@ namespace ConsoleApp1
         public LaneDecorator( Direction direction)//спільне що має унаслідуватись це конструктор
         {
             LaneDirection = direction;
+         
         }
         public LaneDecorator()
         {
@@ -21,6 +22,13 @@ namespace ConsoleApp1
         public override string ToString()
         {
             return "";//щоб intersection привести у тип стрінг і не залежати чи буде доріжка з світлофором чи без
+        }
+
+        public virtual object Clone()
+        {
+            LaneDecorator laneDecorator = new LaneDecorator();
+            laneDecorator.LaneDirection=new Direction(LaneDirection.From,LaneDirection.To);
+            return laneDecorator;
         }
     }
 }

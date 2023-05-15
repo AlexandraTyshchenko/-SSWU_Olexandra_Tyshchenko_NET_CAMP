@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleApp1.TrafficLightWithTurnLamp">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <InheritanceLine Type="ConsoleApp1.TrafficLightDecorator" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="3.824" />
+        <Point X="2.75" Y="4.199" />
+        <Point X="4.125" Y="4.199" />
+        <Point X="4.125" Y="5.688" />
+        <Point X="3.75" Y="5.688" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>TrafficLightWithTurnLamp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp1.TrafficLightDecorator">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAGAAACAAgAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>TrafficLightDecorator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleApp1.Simulator">
+    <Position X="7" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAAAAAAAAAAAQI=</HashCode>
+      <FileName>Simulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp1.LaneWithTrafficLight">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAAABA=</HashCode>
+      <FileName>LaneWithTrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp1.LaneDecorator">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>LaneDecorator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleApp1.IntersectionRules">
+    <Position X="5.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAACAAAAAAAAAACCAAAAgAAQA=</HashCode>
+      <FileName>IntersectionRules.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleApp1.Intersection">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAAAAAAAAEAAAAAAQEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Intersection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleApp1.Direction">
+    <Position X="12.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Direction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp1.ConsoleWriteState">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ConsoleWriteState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ConsoleApp1.IOutput">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>IOutput.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleApp1.ILane">
+    <Position X="10.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILane.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleApp1.IIntersectionRules">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>IIntersectionRules.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleApp1.IIntersection">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IIntersection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleApp1.ITrafficlight" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAACAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITrafficlight.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ConsoleApp1.DirectionType">
+    <Position X="14.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Direction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

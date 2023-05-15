@@ -6,7 +6,7 @@ namespace ConsoleApp1
                                                //їх може бути лише 3 наприклад як в перехресті у формі букви т
                                                //або тільки з 1 полосою тоді реалізувати інтерфейс і лишити не ліст 
                                                //смуг а просто по 1 смузі на кожний напрямок
-    {
+    {    
         public List<ILane> LaneEastWest { get; set; }//ось тут зробити валідування
         public List<ILane> LaneWestEast { get; set; }
         public List<ILane> LaneSouthNorth { get; set; }
@@ -18,39 +18,70 @@ namespace ConsoleApp1
             LaneNorthSouth = new List<ILane>();
             LaneSouthNorth = new List<ILane>();
         }
-        public Intersection(List<ILane> laneEastWest, List<ILane> laneWestEast, 
+       public Intersection(List<ILane> laneEastWest, List<ILane> laneWestEast,
             List<ILane> laneSouthNorth, List<ILane> laneNorthSouth)
         {
-            LaneEastWest = laneEastWest;
-            LaneWestEast = laneWestEast;
-            LaneSouthNorth = laneSouthNorth;
-            LaneNorthSouth = laneNorthSouth;
+            LaneEastWest = new List<ILane>();
+            LaneWestEast = new List<ILane>();
+            LaneSouthNorth = new List<ILane>();
+            LaneNorthSouth = new List<ILane>();
+            foreach (var lane in laneEastWest)
+            {
+                LaneEastWest.Add((ILane)lane.Clone());
+            }
+            foreach (var lane in laneWestEast)
+            {
+                LaneWestEast.Add((ILane)lane.Clone());
+            }
+            foreach (var lane in laneSouthNorth)
+            {
+                LaneSouthNorth.Add((ILane)lane.Clone());
+            }
+            foreach (var lane in laneNorthSouth)
+            {
+                LaneNorthSouth.Add((ILane)lane.Clone());
+            }
         }
 
         public override string ToString()
         {
             StringBuilder stringBuilder= new StringBuilder();
+            stringBuilder.AppendLine("------------------------");
             stringBuilder.AppendLine("схід захід");
+            int id = 1;
             foreach(var lane in LaneEastWest)
             {
-                stringBuilder.AppendLine(lane.ToString());
-            }
-            stringBuilder.AppendLine("захід схід");
-            foreach (var lane in LaneWestEast)
-            {
-                stringBuilder.AppendLine(lane.ToString());
-            }
-            stringBuilder.AppendLine("північ південь");
-            foreach (var lane in LaneNorthSouth)
-            {
-                stringBuilder.AppendLine(lane.ToString());
-            }
-            stringBuilder.AppendLine("південь північ");
-            foreach (var lane in LaneSouthNorth)
-            {
+                stringBuilder.AppendLine(Convert.ToString(id++)+"смуга");
                 stringBuilder.AppendLine(lane.ToString());
             }
             stringBuilder.AppendLine();
+            stringBuilder.AppendLine("захід схід");
+            id = 1;
+            foreach (var lane in LaneWestEast)
+            {
+                stringBuilder.AppendLine(Convert.ToString(id++) + "смуга");
+
+                stringBuilder.AppendLine(lane.ToString());
+            }
+            stringBuilder.AppendLine();
+            stringBuilder.AppendLine("північ південь");
+            id = 1;
+            foreach (var lane in LaneNorthSouth)
+            {
+                stringBuilder.AppendLine(Convert.ToString(id++) + "смуга");
+
+                stringBuilder.AppendLine(lane.ToString());
+            }
+            stringBuilder.AppendLine();
+            stringBuilder.AppendLine("південь північ");
+            id = 1;
+            foreach (var lane in LaneSouthNorth)
+            {
+                stringBuilder.AppendLine(Convert.ToString(id++) + "смуга");
+
+                stringBuilder.AppendLine(lane.ToString());
+            }
+            stringBuilder.AppendLine("------------------------");
             return stringBuilder.ToString();
         }
     }
