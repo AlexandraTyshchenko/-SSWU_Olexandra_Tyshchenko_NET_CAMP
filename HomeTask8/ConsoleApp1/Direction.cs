@@ -15,12 +15,17 @@ namespace ConsoleApp1
     }
     internal class Direction
     {
-        public DirectionType From { get; set; }
-        public DirectionType To { get; set; }
+        public DirectionType From { get;  }
+        public DirectionType To { get;  }
         public Direction(DirectionType from, DirectionType to)
         {
+            if (from == to)
+            {
+                throw new Exception("Не можна передавати однакові напрямки 'з' і 'до'");
+            }
             From = from;
             To = to;
         }
+        
     }
 }

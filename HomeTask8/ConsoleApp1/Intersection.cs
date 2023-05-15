@@ -7,10 +7,11 @@ namespace ConsoleApp1
                                                //або тільки з 1 полосою тоді реалізувати інтерфейс і лишити не ліст 
                                                //смуг а просто по 1 смузі на кожний напрямок
     {    
-        public List<ILane> LaneEastWest { get; set; }//ось тут зробити валідування
-        public List<ILane> LaneWestEast { get; set; }
-        public List<ILane> LaneSouthNorth { get; set; }
-        public List<ILane> LaneNorthSouth { get; set; }
+        public List<ILane> LaneEastWest { get;  }
+        public List<ILane> LaneWestEast { get;  }
+        public List<ILane> LaneSouthNorth { get;  }
+        public List<ILane> LaneNorthSouth { get;  }
+       
         public Intersection()
         {
             LaneEastWest = new List<ILane>();
@@ -21,6 +22,10 @@ namespace ConsoleApp1
        public Intersection(List<ILane> laneEastWest, List<ILane> laneWestEast,
             List<ILane> laneSouthNorth, List<ILane> laneNorthSouth)
         {
+            Validator.CheckSouthNorth(laneSouthNorth);
+            Validator.CheckNorthSouth(laneNorthSouth);
+            Validator.CheckEastWest(laneEastWest);
+            Validator.CheckSouthNorth(laneSouthNorth);
             LaneEastWest = new List<ILane>();
             LaneWestEast = new List<ILane>();
             LaneSouthNorth = new List<ILane>();
