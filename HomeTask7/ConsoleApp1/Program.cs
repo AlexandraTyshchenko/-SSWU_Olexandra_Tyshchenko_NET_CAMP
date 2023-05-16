@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using ConsoleApp1;
-
+// Виведення результату заплутане.
 Console.WriteLine("Hello, World!");
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 List<TrafficLight> list = new List<TrafficLight>()
