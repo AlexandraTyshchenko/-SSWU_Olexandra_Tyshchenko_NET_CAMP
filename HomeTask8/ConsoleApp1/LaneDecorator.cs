@@ -28,6 +28,7 @@ namespace ConsoleApp1
         {
             LaneDecorator laneDecorator = new LaneDecorator();
             laneDecorator.LaneDirection=new Direction(LaneDirection.From,LaneDirection.To);
+
             return laneDecorator;
         }
     }

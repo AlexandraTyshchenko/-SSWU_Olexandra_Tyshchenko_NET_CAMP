@@ -15,8 +15,8 @@ namespace ConsoleApp1
     }
     internal class Direction
     {
-        public DirectionType From { get;  }
-        public DirectionType To { get;  }
+        public DirectionType From { get; set; }
+        public DirectionType To { get; set; }
         public Direction(DirectionType from, DirectionType to)
         {
             if (from == to)

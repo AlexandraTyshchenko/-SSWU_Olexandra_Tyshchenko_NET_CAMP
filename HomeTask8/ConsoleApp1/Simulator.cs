@@ -25,12 +25,11 @@
                 {
                     break;
                 }
-                int id = 1;
-          
+           
 
                 foreach (var (intersection, strategy) in _intersections)
                 {
-                    Console.WriteLine(id++);
+                    
                     _output.StateTrafficLightOutput(intersection, Time);
                     strategy.ChangeState(intersection);
 
