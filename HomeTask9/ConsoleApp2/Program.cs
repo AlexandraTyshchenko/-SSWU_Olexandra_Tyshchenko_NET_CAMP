@@ -3,7 +3,6 @@ using ConsoleApp2;
 List<OrderItem> Items = new List<OrderItem>();
 Items.Add(new OrderItem("pizza", TypeOfOrder.Pizza));
 Items.Add(new OrderItem("cola", TypeOfOrder.Drink));
-Console.WriteLine("Hello, World!");
 Report report = new Report();
 Waiter waiter = new Waiter();
 IMediator mediator = new ConcreteMediator(waiter, report);

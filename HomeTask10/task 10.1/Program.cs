@@ -6,10 +6,11 @@ CardIdentifier cardIdentifier= new CardIdentifier();
 ICard card=null;
 try
 {
-    card = cardIdentifier.Create("4003 7891 0020 5381");
+    card = cardIdentifier.Create("3782 8224 6310005");
     Console.WriteLine(card.PaymentService);
 }
 catch(Exception e)
 {
     Console.WriteLine(e);
 }
+//“378282246310005”
