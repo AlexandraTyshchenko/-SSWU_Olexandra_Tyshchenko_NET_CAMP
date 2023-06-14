@@ -7,5 +7,10 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
+<<<<<<<< HEAD:HomeTask11/task2/obj/Debug/net6.0/task2.GeneratedMSBuildEditorConfig.editorconfig
+build_property.RootNamespace = task2
+build_property.ProjectDir = C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask11\task2\
+========
 build_property.RootNamespace = ConsoleApp1
 build_property.ProjectDir = C:\Users\oleks\-SSWU_Olexandra_Tyshchenko_NET_CAMP\HomeTask11\ConsoleApp1\
+>>>>>>>> 59c370f5bb2b811676e02229aa7ba8bd21e2907b:HomeTask11/ConsoleApp1/obj/Debug/net6.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig

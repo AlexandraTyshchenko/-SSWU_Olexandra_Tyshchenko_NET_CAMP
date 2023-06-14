@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<<< HEAD:HomeTask11/task2/obj/project.assets.json
+      "projectUniqueName": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\task2.csproj",
+      "projectName": "task2",
+      "projectPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\task2.csproj",
+      "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\obj\\",
+========
       "projectUniqueName": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
       "projectPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\ConsoleApp1\\ConsoleApp1.csproj",
       "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\ConsoleApp1\\obj\\",
+>>>>>>>> 59c370f5bb2b811676e02229aa7ba8bd21e2907b:HomeTask11/ConsoleApp1/obj/project.assets.json
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oleks\\AppData\\Roaming\\NuGet\\NuGet.Config",

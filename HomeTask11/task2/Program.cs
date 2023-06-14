@@ -1,3 +1,5 @@
-﻿int[] array = { 5, 2, 9, 1, 7 };
+﻿using task2;
+
+int[] array = { 5, 2, 9, 1, 7 };
 MergeSort.Sort(array);
 Console.WriteLine(string.Join(", ", array));

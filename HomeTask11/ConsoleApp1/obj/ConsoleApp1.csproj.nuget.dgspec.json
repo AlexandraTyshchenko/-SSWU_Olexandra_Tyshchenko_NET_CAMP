@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<<< HEAD:HomeTask11/task2/obj/task2.csproj.nuget.dgspec.json
+    "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\task2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\task2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\task2.csproj",
+        "projectName": "task2",
+        "projectPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\task2.csproj",
+        "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\task2\\obj\\",
+========
     "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
@@ -12,6 +25,7 @@
         "projectPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask11\\ConsoleApp1\\obj\\",
+>>>>>>>> 59c370f5bb2b811676e02229aa7ba8bd21e2907b:HomeTask11/ConsoleApp1/obj/ConsoleApp1.csproj.nuget.dgspec.json
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oleks\\AppData\\Roaming\\NuGet\\NuGet.Config",
