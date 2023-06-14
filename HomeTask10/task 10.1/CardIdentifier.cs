@@ -31,7 +31,7 @@ namespace ConsoleApp1
                 return false;
             }
         }
-        public bool IsVisa(string cardNumber)
+       private bool IsVisa(string cardNumber)
         {
             if ((cardNumber.Length == 13 || cardNumber.Length == 16) && cardNumber.StartsWith("4"))
             {
@@ -58,6 +58,7 @@ namespace ConsoleApp1
                 {
                     return new MasterCard(number);
                 }
+                throw new Exception("Card is not identified");
             }
             throw new Exception("Card is not validated");
         }
