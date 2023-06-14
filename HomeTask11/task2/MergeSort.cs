@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace task2
 {
+    using System;
+    using System.IO;
+    using System.Linq;
+
     public class MergeSort
     {
+        public static void SortFromFile(string inputFile)
+        {
+            int[] array = ReadArrayFromFile(inputFile);
+
+            Sort(array);
+
+            WriteArrayToFile(array, inputFile);
+        }
+
         public static void Sort(int[] array)
         {
             int[] tempArray = new int[array.Length];
@@ -66,6 +79,18 @@ namespace task2
             {
                 array[i] = tempArray[i];
             }
+        }
+
+        private static int[] ReadArrayFromFile(string inputFile)
+        {
+            string[] lines = File.ReadAllLines(inputFile);
+            return lines.Select(int.Parse).ToArray();
+        }
+
+        private static void WriteArrayToFile(int[] array, string outputFile)
+        {
+            string[] lines = array.Select(x => x.ToString()).ToArray();
+            File.WriteAllLines(outputFile, lines);
         }
     }
 }
