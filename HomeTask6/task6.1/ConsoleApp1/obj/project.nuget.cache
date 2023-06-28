@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5BFOJn5rse3irXsjwTaiwPYOKNFw5EnLrRRayDLmWLa+744gseUdvGpha8QaPO8dapM2in66zJaV7vKHaQMzvg==",
+  "dgSpecHash": "sAwmNo82kSwtPrHS5a91nuJEC/ie3EV1O+Nu1ZP1XZZ8HGFgQERRAWnaNFg7rAvMPwZEFgBxp8n4Z1ao8PaaLA==",
   "success": true,
   "projectFilePath": "C:\\Users\\oleks\\-SSWU_Olexandra_Tyshchenko_NET_CAMP\\HomeTask6\\task6.1\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\oleks\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\oleks\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\oleks\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\oleks\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
   "logs": []
 }
